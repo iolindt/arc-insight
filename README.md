@@ -25,3 +25,20 @@ npm run dev
 ## API
 GET /api/blocks  
 GET /api/wallet/:address
+## 🔍 Health Check
+
+GET /health
+
+Response:
+{
+  "status": "OK",
+  "uptime": 123.45
+}
+
+## ⚠️ Error Handling
+
+All errors return:
+
+{
+  "error": "Error message"
+}
