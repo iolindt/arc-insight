@@ -1,9 +1,13 @@
-const service = require("../services/arcService");
+const arcService = require("../services/arcService");
 
 exports.getBlocks = async (req, res, next) => {
   try {
-    const data = await service.fetchBlocks();
-    res.json({ success: true, data });
+    const data = await arcService.fetchBlocks();
+
+    res.json({
+      success: true,
+      data
+    });
   } catch (err) {
     next(err);
   }
@@ -11,8 +15,14 @@ exports.getBlocks = async (req, res, next) => {
 
 exports.getWallet = async (req, res, next) => {
   try {
-    const data = await service.fetchWallet(req.params.address);
-    res.json({ success: true, data });
+    const { address } = req.params;
+
+    const data = await arcService.fetchWallet(address);
+
+    res.json({
+      success: true,
+      data
+    });
   } catch (err) {
     next(err);
   }
