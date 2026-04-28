@@ -1,7 +1,10 @@
-module.exports = (err, req, res, next) => {
-  console.error("❌ Error:", err.message);
+const logger = require("../utils/logger");
 
-  res.status(err.status || 500).json({
+module.exports = (err, req, res, next) => {
+  logger.error(err.message);
+
+  res.status(500).json({
+    success: false,
     error: err.message || "Internal Server Error"
   });
 };
