@@ -1,12 +1,15 @@
 const express = require("express");
-const arcRoutes = require("./src/routes/arcRoutes");
+const routes = require("./src/routes/arcRoutes");
 const errorHandler = require("./src/middleware/errorHandler");
 
 const app = express();
 
 app.use(express.json());
-app.use("/api", arcRoutes);
 
+// routes
+app.use("/api", routes);
+
+// error handler (всегда в конце)
 app.use(errorHandler);
 
 module.exports = app;
