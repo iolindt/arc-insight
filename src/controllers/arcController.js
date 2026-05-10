@@ -1,4 +1,4 @@
-const arcService = require("../services/arcService");
+const service = require("../services/arcService");
 const logger = require("../utils/logger");
 
 exports.getBlocks = async (req, res, next) => {
