@@ -13,3 +13,4 @@ app.use("/api", routes);
 app.use(errorHandler);
 
 module.exports = app;
+const healthRoutes = require("./src/routes/healthRoutes");
