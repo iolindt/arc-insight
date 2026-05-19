@@ -4,6 +4,8 @@ const errorHandler = require("./src/middleware/errorHandler");
 
 const app = express();
 
+const healthRoutes = require("./src/routes/healthRoutes");
+
 app.use(express.json());
 
 // routes
@@ -13,4 +15,5 @@ app.use("/api", routes);
 app.use(errorHandler);
 
 module.exports = app;
-const healthRoutes = require("./src/routes/healthRoutes");
+
+app.use("/api", healthRoutes);
