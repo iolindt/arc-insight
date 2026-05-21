@@ -42,3 +42,13 @@ All errors return:
 {
   "error": "Error message"
 }
+
+## Features
+
+- REST API architecture
+- Middleware-based error handling
+- Wallet validation layer
+- Environment configuration
+- Modular route structure
+- Health monitoring endpoint
+- Axios-based API client
