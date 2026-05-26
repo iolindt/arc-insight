@@ -11,3 +11,4 @@ class CacheService {
     this.cache.set(key, value);
   }
 }
+module.exports = new CacheService();
