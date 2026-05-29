@@ -1,7 +1,11 @@
-const pino = require("pino");
+const fs = require("fs");
+const path = require("path");
 
-const logger = pino({
-  level: process.env.LOG_LEVEL || "info"
-});
+const logPath = path.join(__dirname, "../../logs/errors.log");
 
-module.exports = logger;
+exports.error = (message) => {
+  const log = `[${new Date().toISOString()}] ERROR: ${message}\n`;
+
+  fs.appendFileSync(logPath, log);
+  console.error(log);
+};
