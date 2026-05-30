@@ -9,7 +9,7 @@ const healthRoutes = require("./src/routes/healthRoutes");
 app.use(express.json());
 
 // routes
-app.use("/api", routes);
+app.use("/api/v1", routes);
 
 // error handler (всегда в конце)
 app.use(errorHandler);
