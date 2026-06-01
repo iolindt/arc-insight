@@ -52,3 +52,14 @@ All errors return:
 - Modular route structure
 - Health monitoring endpoint
 - Axios-based API client
+
+- ## API Endpoints
+
+### Get latest blocks
+GET /api/v1/blocks
+
+### Get wallet analytics
+GET /api/v1/wallet/:address
+
+### Healthcheck
+GET /api/v1/health
