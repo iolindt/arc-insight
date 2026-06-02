@@ -1,3 +1,7 @@
+![Node.js](https://img.shields.io/badge/node.js-18.x-green)
+![Express](https://img.shields.io/badge/express-4.x-black)
+![License](https://img.shields.io/badge/license-MIT-blue)
+
 # ARC Insight
 
 Analytics tool for Arc Network.
