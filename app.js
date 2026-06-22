@@ -24,5 +24,11 @@ app.get("/health", (req, res) => {
 
     const swaggerUi = require("swagger-ui-express");
 const swaggerSpec = require("./src/docs/swagger");
+
+  app.use(
+  "/api/docs",
+  swaggerUi.serve,
+  swaggerUi.setup(swaggerSpec)
+);
   });
 });
