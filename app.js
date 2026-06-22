@@ -21,5 +21,8 @@ app.get("/health", (req, res) => {
   res.status(200).json({
     status: "ok",
     uptime: process.uptime()
+
+    const swaggerUi = require("swagger-ui-express");
+const swaggerSpec = require("./src/docs/swagger");
   });
 });
