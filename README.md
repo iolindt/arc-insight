@@ -67,3 +67,9 @@ GET /api/v1/wallet/:address
 
 ### Healthcheck
 GET /api/v1/health
+
+## API Documentation
+
+Swagger UI is available at:
+
+/api/docs
