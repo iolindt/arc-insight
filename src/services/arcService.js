@@ -14,11 +14,11 @@ class ArcService {
     try {
       const res = await this.client.get("/blocks");
 
-      return res.data.slice(0, limit).map(block => ({
-        id: block.id,
-        txCount: block.transactions?.length || 0,
-        timestamp: block.timestamp
-      }));
+    const BlockMapper = require("../mappers/blockMapper");
+
+return BlockMapper.toCollection(
+  res.data.slice(0, limit)
+);
     } catch (err) {
       throw new Error(`Failed to fetch blocks: ${err.message}`);
     }
