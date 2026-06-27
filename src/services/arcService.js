@@ -32,10 +32,12 @@ return BlockMapper.toCollection(
 
       const res = await this.client.get(`/address/${address}`);
 
-      return {
-        address,
-        txCount: res.data.transactions?.length || 0,
-        isActive: (res.data.transactions?.length || 0) > 10
+    const WalletMapper = require("../mappers/walletMapper");
+
+return WalletMapper.toResponse(
+  address,
+  res.data
+);
       };
     } catch (err) {
       throw new Error(`Failed to fetch wallet: ${err.message}`);
